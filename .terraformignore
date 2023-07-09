@@ -1,0 +1,4 @@
+# controls what directories get uploaded to TFC for remote runs
+#
+# deny by default
+.terraform

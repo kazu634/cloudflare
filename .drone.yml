@@ -16,7 +16,7 @@ trigger:
 ---
 kind: pipeline
 type: docker
-name: plan
+name: apply
 
 steps:
   - name: apply

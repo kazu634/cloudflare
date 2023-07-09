@@ -6,6 +6,7 @@ steps:
   - name: plan
     image: reg.kazu634.com/kazu634/terraform
     commands:
+      - terraform init
       - terraform plan
 
 trigger:
@@ -22,6 +23,7 @@ steps:
   - name: apply
     image: reg.kazu634.com/kazu634/terraform
     commands:
+      - terraform init
       - terraform apply
 
 trigger:

@@ -1,0 +1,13 @@
+plan:
+  image: reg.kazu634.com/kazu634/terraform
+  commands:
+    - terraform plan
+  when:
+    branch: "!master"
+
+apply:
+  image: reg.kazu634.com/kazu634/terraform
+  commands:
+    - terraform apply
+  when:
+    branch: master

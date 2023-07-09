@@ -1,0 +1,31 @@
+kind: pipeline
+type: docker
+name: plan
+
+steps:
+  - name: plan
+    image: reg.kazu634.com/kazu634/terraform
+    commands:
+      - terraform init
+      - terraform plan
+
+trigger:
+  branch:
+    exclude:
+    - master
+
+---
+kind: pipeline
+type: docker
+name: apply
+
+steps:
+  - name: apply
+    image: reg.kazu634.com/kazu634/terraform
+    commands:
+      - terraform init
+      - terraform apply
+
+trigger:
+  branch:
+  - master

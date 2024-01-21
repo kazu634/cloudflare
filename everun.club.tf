@@ -126,3 +126,17 @@ resource "cloudflare_record" "everun_mx1" {
   value           = "route3.mx.cloudflare.net"
   zone_id         = "e9c231bc72eb7397b4d12f8c6563a35c"
 }
+
+
+resource "cloudflare_record" "everun_webhook" {
+  allow_overwrite = null
+  comment         = null
+  name            = "webhook"
+  priority        = null
+  proxied         = true
+  tags            = []
+  ttl             = 1
+  type            = "A"
+  value           = "52.193.98.253"
+  zone_id         = "e9c231bc72eb7397b4d12f8c6563a35c"
+}
